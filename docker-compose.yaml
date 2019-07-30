@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  cv:
+    build: .
+    image: opencv_pool_tracker
+    command: python
+    volumes:
+      - .:/code
