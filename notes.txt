@@ -1,0 +1,17 @@
+Protoshape
+
+Powder Bed area in raw video
+- start_x = 345
+- end_x = 720
+- start_y = 180
+- end_y = 590
+
+Based on powder bed area image:
+
+frame_001521.png
+
+1st part:
+- start_x = 65
+- end_x = 172
+- start_y = 270
+- end_y = 352
