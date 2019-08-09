@@ -3,12 +3,14 @@ import numpy as np
 from imutils import contours
 import imutils
 import glob
+import os
 import pandas as pd
 
 
 def calculateIntersection(a0, a1, b0, b1):
     """
     Calculate intersection between interval.
+    Reference: https://stackoverflow.com/a/48537479
     """
     if a0 >= b0 and a1 <= b1: # Contained
         intersection = a1 - a0
@@ -28,16 +30,16 @@ if __name__ == "__main__":
     df = pd.DataFrame(columns=['Frame_Index', 'Area', 'Mean', 'Radius'])
 
     image_file_list = []
-    for filename in glob.glob('./out/protoshape/frames_test/*.png'):
+    for filename in glob.glob('./out/protoshape/frames_test_multiple/*.png'):
         image_file_list.append(filename)
 
     image_file_list.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
 
     print (image_file_list)
-    for image_name in image_file_list:
+    for image_file_path in image_file_list:
         # Load an color image in grayscale
         #image = cv2.imread('./out/protoshape/frames/frame_001521.png')
-        image = cv2.imread(image_name)
+        image = cv2.imread(image_file_path)
 
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -86,7 +88,7 @@ if __name__ == "__main__":
 
                 area = width * height
 
-                if area > 0:
+                if area > 400:
                     intersecting_contours.append(contour)
 
             if len(intersecting_contours) != 0:
@@ -111,15 +113,17 @@ if __name__ == "__main__":
                 print (mean[0])
                 print (radius)
 
-                df = df.append({'Frame_Index': image_name, 'Area': area, 'Mean': mean[0], 'Radius': radius}, ignore_index=True)
-                # cv2.drawContours(image, [largest_contour], -1, (0, 0, 255), 1)
+                df = df.append({'Frame_Index': os.path.basename(image_file_path), 'Area': area, 'Mean': mean[0], 'Radius': radius}, ignore_index=True)
             else:
-                df = df.append({'Frame_Index': image_name, 'Area': 0, 'Mean': 0, 'Radius': 0}, ignore_index=True)
+                df = df.append({'Frame_Index': os.path.basename(image_file_path), 'Area': 0, 'Mean': 0, 'Radius': 0}, ignore_index=True)
         else:
-            df = df.append({'Frame_Index': image_name, 'Area': 0, 'Mean': 0, 'Radius': 0}, ignore_index=True)
+            df = df.append({'Frame_Index': os.path.basename(image_file_path), 'Area': 0, 'Mean': 0, 'Radius': 0}, ignore_index=True)
 
     print (df)
+    df.to_csv('./out/protoshape/interim/pool_data.csv')
 
+    cv2.drawContours(image, [largest_contour], -1, (0, 0, 255), 1)
+    cv2.rectangle(image, (part_1_start_x, part_1_start_y), (part_1_end_x, part_1_end_y), (0, 255, 0))
 
     cv2.imwrite('./out/protoshape/interim/contour.png', image)
 

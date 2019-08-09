@@ -7,3 +7,10 @@ services:
     command: python
     volumes:
       - .:/code
+  notebook:
+    build: notebook
+    volumes:
+      - ./notebook:/work
+      - ./out/protoshape/interim:/work/data
+    ports:
+      - "8888:8888"
