@@ -11,4 +11,5 @@ c.NotebookApp.open_browser = False
 #     c.NotebookApp.password = passwd(os.environ['PASSWORD'])
 #     del os.environ['PASSWORD']
 
-c.NotebookApp.password = u'sha1:c07a3f838766:70668d9c3ecb3ed90a08e57e4e1bfc77962958dc'
+#trmntr
+#c.NotebookApp.password = u'sha1:c07a3f838766:70668d9c3ecb3ed90a08e57e4e1bfc77962958dc'

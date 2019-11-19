@@ -1,3 +1,4 @@
 numpy
 imutils
 pandas
+boto3

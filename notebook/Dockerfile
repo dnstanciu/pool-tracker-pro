@@ -1,5 +1,12 @@
 FROM jupyter/scipy-notebook:latest
 
+COPY requirements.txt /
+
+RUN pip install -U pip
+
+# Install dependencies.
+RUN pip install -r /requirements.txt
+
 # Set work directory.
 #RUN mkdir /code
 WORKDIR /work
