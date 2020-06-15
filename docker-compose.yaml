@@ -8,8 +8,8 @@ services:
     volumes:
       - .:/code
     environment:
-      - AWS_ACCESS_KEY_ID=AKIAWNQH4SVBIALFLW74
-      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_ACCESS_KEY_ID=XXX
+      - AWS_SECRET_ACCESS_KEY=XXX
       - AWS_DEFAULT_REGION=eu-west-1
   notebook:
     build: notebook
