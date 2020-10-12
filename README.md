@@ -1,5 +1,5 @@
-# pool-tracker
-Pool Tracker
+# pool-tracker-pro
+Pool Tracker Pro
 
 This is an early prototype for detecting the area where metal is melted in a 3D printer.
 
