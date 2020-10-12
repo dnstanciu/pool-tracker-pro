@@ -3,6 +3,8 @@ Pool Tracker
 
 This is an early prototype for detecting the area where metal is melted in a 3D printer.
 
+## Video
+
 [![Pool Tracker Video](https://img.youtube.com/vi/TMDshCcjujc/0.jpg)](https://www.youtube.com/watch?v=TMDshCcjujc)
 
 Software inputs:
