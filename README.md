@@ -11,7 +11,7 @@ Software inputs:
 
 Videos of metal 3D printing such as direct metal laser sintering (DMLS), selective laser melting (SLM), etc
 
-Software outputs:
+Software outputs and metrics:
 
 - area of melt pool
 - mean intensity (brightness) of melt pool
