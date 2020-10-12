@@ -29,3 +29,5 @@ Another good paper for more info:
 Everton, Sarah K., et al. "Review of in-situ process monitoring and in-situ metrology for metal additive manufacturing." Materials & Design 95 (2016): 431-445. - https://www.sciencedirect.com/science/article/pii/S0264127516300995
 
 The software was developed at Meshflow Limited (Company No. 12027794) and was released under the MIT Licence.
+
+A maintained fork of the software can be found at https://github.com/dnstanciu/pool-tracker-pro.
