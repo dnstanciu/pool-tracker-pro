@@ -1,7 +1,7 @@
 # pool-tracker-pro
 Pool Tracker Pro
 
-This is an early prototype for detecting the area where metal is melted in a 3D printer.
+This is an early prototype for detecting the area where metal is melted in a 3D printer. It monitors variations of metrics of the melt pool in order to detect defects when building the part.
 
 ## Video
 
