@@ -30,3 +30,10 @@ Clijsters, Stijn, et al. "In situ quality control of the selective laser melting
 Another good paper for more info on metal printing monitoring:
 
 Everton, Sarah K., et al. "Review of in-situ process monitoring and in-situ metrology for metal additive manufacturing." Materials & Design 95 (2016): 431-445. - https://www.sciencedirect.com/science/article/pii/S0264127516300995
+
+Event-based sensors, [such as the Dynamic Vision Sensor (DVS)](https://inivation.com/products/customsolutions/videos/), can be used for monitoring the fast movements of the laser. Thus, the melt pool can be monitored at a higher speed using this type of sensor.
+Brain-derived algorithms can possibly be applied to improve the error rate in metal 3D printing, aka additive manufacturing.
+
+Review paper on event-based vision:
+
+Gallego, Guillermo, et al. "Event-based vision: A survey." arXiv preprint arXiv:1904.08405 (2019). - https://arxiv.org/abs/1904.08405
